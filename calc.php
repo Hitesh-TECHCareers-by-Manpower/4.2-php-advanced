@@ -3,7 +3,7 @@ include './templates/header.php';
 ?>
 
 <p>
-Welcome to our PHP Homepage!
+Welcome to our Calculator Page!
 </p>
 
 <?php

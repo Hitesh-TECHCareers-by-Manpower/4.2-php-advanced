@@ -12,5 +12,6 @@
 </head>
 <body>
     <h1>WebPage</h1>
-
-    
+    <?php 
+        include dirname( __FILE__ ).'/navigation.php';
+    ?>
