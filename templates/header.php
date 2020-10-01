@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php echo $GLOBALS['pageTitle']; ?></title>
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Style(s) -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <script type="text/JavaScript" src="js/scripts.js" defer></script>
-
+  <!-- Script(s) -->
+  <script type="text/JavaScript" src="js/scripts.js" defer></script>
 </head>
 <body>
-    <h1>WebPage</h1>
-    <?php 
-        include dirname( __FILE__ ).'/navigation.php';
-    ?>
+  <h1><?php echo $GLOBALS['pageTitle']; ?></h1>
+  <?php
+    // dirname( __FILE__ ) grabs the currently executing file's ABSOLUTE path (as a string.)
+    include dirname( __FILE__ ).'/navigation.php';
+  ?>
