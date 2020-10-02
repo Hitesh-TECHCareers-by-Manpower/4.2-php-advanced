@@ -1,4 +1,12 @@
 <?php
+//we need to use session_start to declare
+
+session_start();
+if ( !isset( $_SESSION['calcHistory'] ) )
+{
+  $_SESSION['calcHistory'] = array();
+}
+
 // Try to avoid use of globals unless they are absolutely necessary...
 $GLOBALS['pageTitle'] = 'PHP Calculator';
 
@@ -17,19 +25,31 @@ if ( !empty( $_GET ) )
     switch ( $_GET['op'] )
     {
         case 'addition':
+            $opSymbol = '+';
             $result = $_GET['value1'] + $_GET['value2'];
             break;
         case 'substraction':
+            $opSymbol = '-';
             $result = $_GET['value1'] - $_GET['value2'];
             break;
         case 'multiplication':
+            $opSymbol = '&times;';
             $result = $_GET['value1'] * $_GET['value2'];
             break;
         case 'division':
+            $opSymbol = '&devide;';
             $result = $_GET['value1'] / $_GET['value2'];
             break;
     }
+    array_push( $_SESSION['calcHistory'], "{$_GET['value1']} {$opSymbol} {$_GET['value2']} = {$result}" );
+  
+
+   
 }
+echo'<pre>';  //new line and space
+var_dump( $_SESSION );
+var_dump( $result );
+echo'<pre>';
 
 ?>
 
@@ -52,7 +72,7 @@ if ( !empty( $_GET ) )
       <option value="addition">
         +
       </option>
-      <option value="subtraction">
+      <option value="substraction">
         -
       </option>
       <option value="multiplication">
@@ -74,5 +94,13 @@ if ( !empty( $_GET ) )
   <input type="submit" value="Calculate!">
 </form>
 
-<?php // Show our footer.
+<?php if (  $result != FALSE ) : ?>
+<P>
+Your result for your calculation is:
+<?php echo $result; ?>
+</p>
+<?php endif; ?>
+
+<?php
+// Show our footer.
 include './templates/footer.php';
