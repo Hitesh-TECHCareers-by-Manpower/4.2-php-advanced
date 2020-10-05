@@ -22,9 +22,9 @@
       </a>
     </li>
     <li>
-        <a href="snack-search.html">
-          Snack Search (AJAX + API)
-        </a>
-      </li>
+      <a href="snack-search.html">
+        Snack Search (AJAX + API)
+      </a>
+    </li>
   </ul>
 </nav>
