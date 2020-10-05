@@ -21,5 +21,10 @@
         Cat Facts (External API)
       </a>
     </li>
+    <li>
+        <a href="snack-search.html">
+          Snack Search (AJAX + API)
+        </a>
+      </li>
   </ul>
 </nav>
