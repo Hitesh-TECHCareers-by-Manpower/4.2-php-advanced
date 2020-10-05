@@ -40,12 +40,12 @@ class Snack
     }
 }
 
-$mySnack = new Snack( 'Oh Henry', 'chocolate', 1.89568, "200.904" );
-var_dump( $mySnack );
+//$mySnack = new Snack( 'Oh Henry', 'chocolate', 1.89568, "200.904" );
+//var_dump( $mySnack );
 
-$mySnack->caramelize();
-var_dump( $mySnack );
+//$mySnack->caramelize();
+//var_dump( $mySnack );
 
-$mySnack->output(); //calling a method
+//$mySnack->output(); //calling a method
 
 ?>

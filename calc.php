@@ -37,7 +37,7 @@ if ( !empty( $_GET ) )
             $result = $_GET['value1'] * $_GET['value2'];
             break;
         case 'division':
-            $opSymbol = '&devide;';
+            $opSymbol = '&divide;';
             $result = $_GET['value1'] / $_GET['value2'];
             break;
     }
